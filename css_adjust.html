@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS 선언 -->
+    <style>
+        /* style 태그 내 작성하는 코드는 CSS 코드 */
+        /* CSS 코드에서의 주석 */
+
+        /* 클래스명 h1을 적용한 태그에 선언해놓은 style들이 적용된다. */
+        .ph1{
+            display: block;
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .bg{
+            background-color: yellow;
+        }
+
+        .naver{
+            color: #03C75A;
+            text-decoration: none;
+        }
+
+        /* 
+        앞에 "."을 붙이면 특정 태그의 class를 통해 해당 style을 적용할 수 있고, 
+        태그 이름을 작성하면, 해당 모든 태그의 스타일을 적용할 수 있다.
+        */
+        div{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        /* 이미 정의되어 있는 색상이름 사용 */
+        .name-color{
+            background-color: aquamarine;
+        }
+
+        /* rgb 색상 사용 */
+        /* r: red, g: green, b:blue */
+        /* 각 색깔의 수치는 0 ~ 255 범위 */
+        .rgb-color{
+            background-color: rgb(50, 50, 50);
+        }
+
+        /* hashcode 이용 */
+        /* 네이버 색상 해시코드 = #03C75A */
+        .hash-color{
+            background-color: rgb(3, 199, 90);
+        }
+
+        /* 색상과 함께 투명도(alpha)를 주는 방법 */
+        .rgba-color{
+            /* 투명도는 0 ~ 1, 색 자체가 변하는게 아니라 투명해짐. body의 백그라운드 색을 바꿔보면 알 수 있음(body : black) */
+            background-color: rgba(255, 0, 0, 0.5); 
+        }
+
+        .rgba-hash{
+            /* 투명도는 00 ~ ff */
+            background-color: #ff000088;
+            /* 이거 div 안해봄 ㅇㅇ */
+        }
+
+        /* opacity 스타일을 이용해서도 투명도 조절 가능 */
+        .rgb-opacity{
+            background-color: #ff0000;
+            /* 투명도가 70% */
+            opacity: 0.7;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <span class="ph1">h1과 같음?!</span>
+
+    <!-- 띄어쓰기를 이용하여 여러개의 CSS를 적용할 수 있다. -->
+    <div class="ph1 bg">나도 h1 스타일 적용할래</div>
+
+    <!-- CSS 를 적용해서 밑줄 없애고, 색깔은 네이버 색깔로 나타내기-->
+    <a href="https://www.naver.com/" target="_blank" class="naver">네이버</a>
+
+    <!-- 색상에 대해 적용 -->
+    <div class="name-color"></div>
+    <div class="rgb-color"></div>
+    <div class="hash-color"></div>
+    <div class="rgba-color"></div>
+    <div class="rgb-opacity"></div>
+
+</body>
+</html>
