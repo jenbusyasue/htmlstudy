@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            border: 2px solid orange;
+            position: relative;
+        }
+
+        .text {
+            /* 해당 태그가 z축 방향으로 뜸 */
+            /* 해당 태그의 부모가 position: relative 이어야 정상 동작함. */
+            position: absolute;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .text_top {
+            /* 부모의 좌측 상단 모서리 기준으로 위치 조정 */
+            top: 50px;
+            left: 130px;
+        }
+
+        .text_bottom {
+            /* 부모의 좌측 상단 모서리 기준으로 위치 조정 */
+            top: 100px;
+            left: 120px;
+        }
+
+        .right {
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+
+            /* 부모의 우측 하단 모서리 기준으로 위치 조정 */
+            bottom: 50px;
+            right: 130px;
+        }
+
+        .center {
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            display: block;
+
+            /* 부모 기준 가운도 위치시키기*/
+            top: 50%; /* 부모 높이의 절반에 해당 */
+            left: 50%; /* 부모 너비의 절반에 해당 */
+            /* 위에처럼만 하면 가운데로는 가지만 첫 글자 기준으로 가운데이기 때문에 전체 글자가 정중앙에 위치 X */
+
+            /* 그래서 transform 사용, 여기서 50%는 본인 태그의 너비와 높이의 절반에 해당  */
+            transform: translate(-50%, -50%);
+        }
+
+        .navigation{
+            /* fixed 속성 : 브라우저 창에서 고정된 위치에 놓음 */
+            position: fixed;
+
+            /* 브라우저 창 기준 상단에 위치시킴 */
+            top: 0;
+
+            background-color: white;
+
+            /* width 설정해주기 */
+            width: 100%;
+        }
+
+        .quick{
+            position: fixed;
+
+            top: 50%;
+            right: 0;
+
+            background-color: white;
+            transform: translate(0%, -50%);
+        }
+
+        .quick > div{
+            cursor: pointer;
+        }
+
+        /* div에 마우스 커서를 올렸을 때에만 style 적용하기 */
+        .quick > div:hover{
+            background-color: orange;
+            color: white;
+        }
+
+        .top_btn{
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            background-color: greenyellow;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- 기본적으로 태그 영역은 서로 겹치지 않음 -->
+    <div class="banner">
+        <img src=".\resources\images\background_image.jpg" width="100%" height="250px">
+        <span class="text text_top">석양이</span>
+        <span class="text text_bottom">진다...</span>
+    </div>
+    <div class="banner">
+        <img src=".\resources\images\background_image.jpg" width="100%" height="250px">
+        <span class="center"> * 6명 동시 처치 * </span>
+    </div>
+    <div class="banner">
+        <img src=".\resources\images\background_image.jpg" width="100%" height="250px">
+        <span class="right"> - 맥크리 - </span>
+    </div>
+
+    <div class="navigation">
+        <h1>네비게이션 바</h1>
+    </div>
+
+    <div class="quick">
+        <div>라인</div>
+        <div>메르시</div>
+        <div>겐지</div>
+    </div>
+
+    <div class="top_btn">
+        <!-- a태그 href에 #을 넣거나 빈란으로 두면 클릭 시 화면 상단으로 이동 -->
+        <a href="#">top</a>
+    </div>
+</body>
+
+</html>

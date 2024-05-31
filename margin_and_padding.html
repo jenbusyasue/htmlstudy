@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* margin 은 상하좌우 4방향 모두 일괄 적용*/
+        /* top, bottom, left, ringt */
+        .child{
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+            margin-left: 48px;
+            margin-top: 48px;
+        }
+
+        .box > p{
+            background-color: burlywood;
+            padding-left: 20px;
+        }
+
+        .box > img{
+            /* img 태그 영역에 마우스 커서를 올리면 포인터로 모양이 바뀜 */
+            cursor: pointer;
+            /* margin으로 하면 공백은 클릭이 안됨. padding은 공백도 클릭가능으로 인식됨 */
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="child"></div>
+    </div>
+
+    <div class="box">
+        <p>padding 확인</p>
+    </div>
+
+    <div class="box">
+        <img 
+        src="https://static-00.iconduck.com/assets.00/close-icon-2048x2047-22z7exfk.png" 
+        width="50px">
+    </div>
+</body>
+</html>

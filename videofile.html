@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <!-- autoplay 속성 : 페이지가 열리면 자동으로 재생 -->
+        <!-- 단, 소리가 있는 영상은 muted 속성을 추가해주어야 autoplay가 된다. -->
+        <!-- loop 속성 : 영상이 끝나고 반복 재생 -->
+        <!-- controls 속성 : 영상에 마우스를 올리면 컨트롤바가 생김 -->
+        <video 
+        src="./resources/videos/background_video.mp4" 
+        autoplay muted loop controls
+        width="1000px"
+        height="600px">
+        </video>
+    </div>
+
+    <div>
+        <!-- 유튜브 영상 넣기 -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h8UGJmWJGu8?si=cGz0MvoxMx9TZkjp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>

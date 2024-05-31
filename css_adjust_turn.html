@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모든 div태그에 style 적용 (가장 광범위, 1빠로 적용) */
+        div{
+            border: 2px solid black;
+        }
+
+        /* box 클래스를 가지는 태그에 style적용 (중간 범위, 2빠로 적용)
+        파이썬같이 코드가 순차적으로 실행됨(class= 에 들어가는 순서와는 상관 없음. 그냥 style에서의 순서가 중요)*/
+        .box{
+            border: 2px solid red;
+            height: 100px;
+        }
+
+        .blue{
+            border: 2px solid blue;
+        }
+
+        /* 특정 id에 style 적용 (가장 작은 범위, 3빠) */
+        #id_box{
+            border: 2px solid yellow;
+        }
+
+        .child{
+            height: 29.5%;
+        }
+
+        .container{
+            height: 100px;
+            border: 2px solid pink;
+        }
+
+        /*  부모를 통해 자식 태그에 style 적용 */
+        .container > div{
+            /* 부모 크기에 대해 자식 크기 계산 */
+            height: calc(100%/3 - 4px);
+        }
+
+        .container > div > p{
+            background-color: aquamarine;
+        }
+
+        /* container 내에 포함된 전체 p태그에 style 부여 */
+        .container p{
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 태그 자체에 style 적용 (가장 마지막에 적용) -->
+    <div id="id_box" class="box blue" style="border: 2px solid green;">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+
+    <br>
+
+    <!-- 바깥 div 태그 기준으로 내부에 한탭 들어간 div 태그를 자식 태그라고 한다. -->
+    <!-- 두탭 이상 들어간 p 태그는 자손 or 후손 태그라고 한다. -->
+    <div class="container">
+        <div>
+            <p>손자</p>
+        </div>
+        <div>아들</div>
+        <div>딸</div>
+    </div>
+</body>
+</html>
