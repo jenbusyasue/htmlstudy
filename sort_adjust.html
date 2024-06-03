@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            margin-right: 10px;
+
+            display: inline-flex;
+            flex-direction: column;
+
+            border-radius: 20px;
+
+            /* 테두리에 그림자 주기 */
+            /* 첫 번재 px은 그림자의 가로방향 위치 */
+            /* 두 번재 px는 그림자의 세로방향 위치 */
+            /* 세 번재 px는 그림자의 뿌연 정도 */
+            /* 네 번째 px는 그림자의 번짐 정도 */
+            box-shadow: 0px 0px 4px 2px #dddddd;
+
+            /* 자식 요소가 부모 영역을 벗어날 때의 처리 */
+            overflow: hidden;
+        }
+
+        .card>div {
+            position: relative;
+            border: 0px solid red;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+
+        /* card 클래스 의 각각 div 선택 */
+        .card>div:nth-child(1) {
+            height: 70%;
+            position: relative;
+
+            /* 내부 이미지 가운데 정렬 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .card>div:nth-child(2) {
+            height: 30%;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        .photo {
+            transition-duration: 1s;
+        }
+
+        .photo:hover {
+            width: 140%;
+        }
+
+        .card-container{
+            border: 0px solid green;
+
+            width: 800px;
+
+            /* 내부 요소가 부모 크기를 벗어나도 줄바꿈되지 않도록 함 */
+            white-space: nowrap;
+
+            /* 가로방향으로 삐져나오는 자식 요소에 대한 처리 */
+            overflow-x: scroll;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card-container">
+        <!-- 카드 만들기 -->
+        <div class="card">
+            <div>
+                <img class="photo" width="120%"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTNfOTEg/MDAxNTM5NDIxNzcyOTIx.PoZls_d9MhuvxQRkeO-2w-4rkql3hw09PF4K7GXYE4Ag.uvTAQV5XJ9bLBX1zFETTrBdV3pw5RSAL-pX-grbcOvkg.JPEG.sam8231/%EC%83%9D%EB%A1%9C%EB%9E%91_%EB%B0%94%EC%9D%B4%EC%BB%A4%EC%9E%AC%ED%82%B7_%ED%95%84%EC%9B%A8%EC%9D%B4_.jpg?type=w800">
+                <img class="heart" width="20" height="20" src=".\resources\images\Heart-icon-removebg-preview.png">
+            </div>
+            <div>
+                <p>재킷</p>
+                <p>
+                    <span style="color: red;">34%</span>
+                    <del>30,000원</del>
+                    <span style="text-decoration: line-through; color: #aaaaaa; font-size: 13px;">30,000원</span>
+                    20,000원
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img class="photo" width="120%"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTNfOTEg/MDAxNTM5NDIxNzcyOTIx.PoZls_d9MhuvxQRkeO-2w-4rkql3hw09PF4K7GXYE4Ag.uvTAQV5XJ9bLBX1zFETTrBdV3pw5RSAL-pX-grbcOvkg.JPEG.sam8231/%EC%83%9D%EB%A1%9C%EB%9E%91_%EB%B0%94%EC%9D%B4%EC%BB%A4%EC%9E%AC%ED%82%B7_%ED%95%84%EC%9B%A8%EC%9D%B4_.jpg?type=w800">
+                <img class="heart" width="20" height="20" src=".\resources\images\Heart-icon-removebg-preview.png">
+            </div>
+            <div>
+                <p>재킷</p>
+                <p>
+                    <span style="color: red;">34%</span>
+                    <del>30,000원</del>
+                    <span style="text-decoration: line-through; color: #aaaaaa; font-size: 13px;">30,000원</span>
+                    20,000원
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img class="photo" width="120%"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTNfOTEg/MDAxNTM5NDIxNzcyOTIx.PoZls_d9MhuvxQRkeO-2w-4rkql3hw09PF4K7GXYE4Ag.uvTAQV5XJ9bLBX1zFETTrBdV3pw5RSAL-pX-grbcOvkg.JPEG.sam8231/%EC%83%9D%EB%A1%9C%EB%9E%91_%EB%B0%94%EC%9D%B4%EC%BB%A4%EC%9E%AC%ED%82%B7_%ED%95%84%EC%9B%A8%EC%9D%B4_.jpg?type=w800">
+                <img class="heart" width="20" height="20" src=".\resources\images\Heart-icon-removebg-preview.png">
+            </div>
+            <div>
+                <p>재킷</p>
+                <p>
+                    <span style="color: red;">34%</span>
+                    <del>30,000원</del>
+                    <span style="text-decoration: line-through; color: #aaaaaa; font-size: 13px;">30,000원</span>
+                    20,000원
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img class="photo" width="120%"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTNfOTEg/MDAxNTM5NDIxNzcyOTIx.PoZls_d9MhuvxQRkeO-2w-4rkql3hw09PF4K7GXYE4Ag.uvTAQV5XJ9bLBX1zFETTrBdV3pw5RSAL-pX-grbcOvkg.JPEG.sam8231/%EC%83%9D%EB%A1%9C%EB%9E%91_%EB%B0%94%EC%9D%B4%EC%BB%A4%EC%9E%AC%ED%82%B7_%ED%95%84%EC%9B%A8%EC%9D%B4_.jpg?type=w800">
+                <img class="heart" width="20" height="20" src=".\resources\images\Heart-icon-removebg-preview.png">
+            </div>
+            <div>
+                <p>재킷</p>
+                <p>
+                    <span style="color: red;">34%</span>
+                    <del>30,000원</del>
+                    <span style="text-decoration: line-through; color: #aaaaaa; font-size: 13px;">30,000원</span>
+                    20,000원
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img class="photo" width="120%"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTNfOTEg/MDAxNTM5NDIxNzcyOTIx.PoZls_d9MhuvxQRkeO-2w-4rkql3hw09PF4K7GXYE4Ag.uvTAQV5XJ9bLBX1zFETTrBdV3pw5RSAL-pX-grbcOvkg.JPEG.sam8231/%EC%83%9D%EB%A1%9C%EB%9E%91_%EB%B0%94%EC%9D%B4%EC%BB%A4%EC%9E%AC%ED%82%B7_%ED%95%84%EC%9B%A8%EC%9D%B4_.jpg?type=w800">
+                <img class="heart" width="20" height="20" src=".\resources\images\Heart-icon-removebg-preview.png">
+            </div>
+            <div>
+                <p>재킷</p>
+                <p>
+                    <span style="color: red;">34%</span>
+                    <del>30,000원</del>
+                    <span style="text-decoration: line-through; color: #aaaaaa; font-size: 13px;">30,000원</span>
+                    20,000원
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <img class="photo" width="120%"
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMTNfOTEg/MDAxNTM5NDIxNzcyOTIx.PoZls_d9MhuvxQRkeO-2w-4rkql3hw09PF4K7GXYE4Ag.uvTAQV5XJ9bLBX1zFETTrBdV3pw5RSAL-pX-grbcOvkg.JPEG.sam8231/%EC%83%9D%EB%A1%9C%EB%9E%91_%EB%B0%94%EC%9D%B4%EC%BB%A4%EC%9E%AC%ED%82%B7_%ED%95%84%EC%9B%A8%EC%9D%B4_.jpg?type=w800">
+                <img class="heart" width="20" height="20" src=".\resources\images\Heart-icon-removebg-preview.png">
+            </div>
+            <div>
+                <p>재킷</p>
+                <p>
+                    <span style="color: red;">34%</span>
+                    <del>30,000원</del>
+                    <span style="text-decoration: line-through; color: #aaaaaa; font-size: 13px;">30,000원</span>
+                    20,000원
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 1px solid black;
+        }
+
+        .container{
+            height: 100px;
+
+            /* container 내부 태그들을 정렬하고자 한다면 */
+            /* container 에 display: flex 부여 */
+            /* 내부 태그들의 display가 inline 이든 block이든 inline으로 만든다 */
+            display: flex;
+
+            /* 수평방향 정렬 */
+            /* start, center, end, space-* */
+            justify-content: space-evenly;
+
+            /* 수직방향 정렬 */
+            align-items: end;
+        }
+
+        .container > div{
+            height: 32.3%;
+            width: 60px;
+        }
+
+        .login_box{
+            height: 200px;
+            width: 200px;
+
+            /* flex 는 기본적으로 내부 요소를 한줄로 표현해버림(가로 방향) */
+            display: flex;
+
+            /* 내부 요소를 세로 방향 한줄로 표현하도록 방향을 바꿈 */
+            flex-direction: column;
+
+            /* direction이 column 인 경우 수직 정렬은 justify-content 이용 */
+            justify-content: center;
+
+            /* 간격 적용하기 */
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly;
+
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+            background-color: greenyellow;
+            border: 2px solid green;
+        }
+
+        /* 배경제거 사이트 : remove.bg */
+
+        .logo{
+            display: flex;
+            align-items: center;
+            border: 0;
+        }
+
+        .menu{
+            display: flex;
+            align-items: center;
+            border: 0;
+        }
+
+        .menu > a{
+            padding: 10px;
+            color: green;
+        }
+
+        .back{
+            display: flex;
+            align-items: center;
+            border: 0;
+        }
+
+        button{
+            /* 테두리의 모서리를 둥글게함 */
+            border-radius: 10px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+            border: 1px solid white;
+            color: white;
+
+            /* 배경색을 투명하게 만듬 */
+            background-color: transparent;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: orange;
+            /* style의 변화가 있는 경우 변화시간을 부여하면 부드럽게 동작 */
+            transition-duration: 0.5s; /* 1s 는 1초동안 색상 변화 */
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <a href="">네이버</a>
+        <a href="">구글</a>
+        <a href="">인터넷</a>
+    </div>
+
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="login_box">
+        <input type="text">
+
+        <input type="password">
+
+        <button>로그인</button>
+    </div>
+
+    <div class="navigation">
+        <div class="logo">
+            <img src=".\resources\images\naver_logo-removebg-preview.png" height="50px">
+        </div>
+
+        <div class="menu">
+            <a href="">교육과정</a>
+            <a href="">학원소개</a>
+            <a href="">커뮤니티</a>
+            <a href="">프로젝트</a>
+        </div>
+
+        <div class="back">
+            <button>로그인</button>
+            <img src=".\resources\images\naver_loge2-removebg-preview.png" height="50px">
+        </div>
+    </div>
+</body>
+</html>
