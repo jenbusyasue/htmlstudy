@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>새 탭</title>
 
     <style>
-        div{
-            border: 1px solid black;
+        div {
+            border: opx solid black;
         }
 
-        .top{
+        .top {
             display: flex;
             justify-content: end;
         }
 
-        .top > div{
+        .top>div {
             display: flex;
             align-items: center;
         }
 
-        .top a{
+        .top a {
             margin-left: 5px;
             margin-right: 5px;
 
@@ -28,56 +29,151 @@
             text-decoration: none;
         }
 
-        .top a:hover{
+        .top a:hover {
             cursor: pointer;
             text-decoration: underline;
         }
 
-        .top img{
+        .top img {
             width: 40px;
         }
 
-        .top img:hover{
+        .top img:hover {
             /* radius를 width의 절반만큼 주면 원형이 됨 */
             border-radius: 20px;
 
             /* 이미지에 효과 주기 */
-            filter: brightness(70%); /* 밝기 조정 */
+            background-color: #dddddd;
         }
 
-        .logo{
+        .logo {
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+        }
+
+        .logo>div {
+            display: flex;
+
+        }
+
+        .search_box {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .search_box>input {
+            width: 500px;
+            border: 0;
+            box-shadow: 0px 0px 4px 2px #ddd;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .icon-container {
             display: flex;
             justify-content: center;
         }
 
-        .logo > div{
+        .icon-box {
+            width: 600;
+            display: flex;
+            /* 줄 초과시 줄바꿈 되도록 함 */
+            flex-wrap: wrap;
+        }
+
+        .icon {
+            /* 부모클래스의 100%에서 나누기 5한 만큼의 범위를 가짐 */
+            width: calc(100% / 5);
+            height: 130px;
             display: flex;
             align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            background-color: #ddd;
         }
     </style>
 
 </head>
+
 <body>
     <div class="top">
         <div>
             <a href="">Gmail</a>
             <a href="">이미지</a>
             <a href="">
-                <img 
-                src=".\resources\images\flask-removebg-preview.png">
+                <img src=".\resources\images\flask-removebg-preview.png">
             </a>
             <a href="">
-                <img 
-                src=".\resources\images\google_menu-removebg-preview.png">
+                <img src=".\resources\images\google_menu-removebg-preview.png">
             </a>
         </div>
     </div>
 
     <div class="logo">
         <div>
-            <img 
-            src=".\resources\images\google_logo-removebg-preview.png">
+            <img src=".\resources\images\google_logo-removebg-preview.png">
+        </div>
+    </div>
+
+    <div>
+        <div class="search_box">
+            <input type="text" placeholder="Google 검색 도는 URL 검색">
+        </div>
+    </div>
+
+    <div class="icon-container">
+        <div class="icon-box">
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
+            <div class="icon">
+                <img width="50px" src=".\resources\images\naver_loge2-removebg-preview.png">
+                <span>NAVER</span>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
